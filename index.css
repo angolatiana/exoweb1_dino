@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cadre {
+    height: 50vh;
+    width: 60vw;
+    border: 2px solid;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    height: 14vh;
+    width: 5vw;
+    background-color: brown;
+    margin-left: 0.5vw;
+}
+
+.cactus {
+    background-color: green;
+    position: absolute;
+    height: 6vh;
+    width: 2vw;
+    bottom: 0;
+    right: 19.5vw;
+    animation-name: cactus;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cactus {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-65vw);
+    }
+}
+
+.jump {
+    animation: dino 1s infinite linear;
+}
+
+@keyframes dino {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
